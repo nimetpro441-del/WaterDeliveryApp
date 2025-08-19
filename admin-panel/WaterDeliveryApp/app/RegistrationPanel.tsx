@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
-export default function RegistrationPanel({ onRegister }) {
+export default function RegistrationPanel() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(onRegister) onRegister({ name, email });
+    alert(`Kayıt başarılı! Name: ${name}, Email: ${email}`);
     setName('');
     setEmail('');
-    alert('Kayıt başarılı!');
   };
 
   return (
